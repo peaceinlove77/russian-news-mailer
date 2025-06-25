@@ -143,6 +143,10 @@ def send_email(subject, html_body):
 
 
 if __name__ == "__main__":
+    # --- 디버깅 코드 추가 ---
+    print(f"!!! DEBUG: TO_EMAIL 변수 값: {TO_EMAIL}")
+    # --- 디버깅 코드 끝 ---
+    
     all_news = {}
     for source_name, feed_url in RUSSIAN_NEWS_FEEDS.items():
         latest_articles = get_latest_news(feed_url, limit=3) # 언론사별 3개 뉴스

@@ -24,7 +24,7 @@ TO_EMAIL = "receiver@example.com"
 RUSSIAN_NEWS_FEEDS = {
     "리아노보스티 (경제)": "https://ria.ru/export/rss2/economy/index.xml",
     "인테르팍스 (주요뉴스)": "https://www.interfax.ru/rss.asp",
-    "코메르산트 (주요뉴스)": "https://www.kommersant.ru/RSS/main.xml"
+    "코메르산트 (주요뉴스)": "https://www.kommersant.ru/RSS/main.xml",
     "메두자 (독립언론)": "https://meduza.io/rss/all"
 }
 # --- 설정 끝 ---

@@ -3,10 +3,8 @@ name: Daily Russian News Mailer
 
 # 이 워크플로우를 언제 실행할지 설정
 on:
-  # 매일 UTC 22시(한국 시간 오전 7시)에 실행
   schedule:
     - cron: '0 22 * * *'
-  # 수동으로 실행할 수 있도록 버튼 추가
   workflow_dispatch:
 
 # 실행할 작업(Job) 정의
@@ -33,9 +31,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install feedparser openai sendgrid requests
 
-      # 4. 파이썬 스크립트 실행
+      # 4. 파이썬 스크립트 실행 (가장 중요한 부분!)
       - name: Run Python script
-        # GitHub Secrets에 저장된 값들을 환경 변수로 설정하여 스크립트에 전달
+        # GitHub Secrets에 저장된 값들을 환경 변수(env)로 설정하여 스크립트에 전달
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}

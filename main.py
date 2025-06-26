@@ -1,3 +1,4 @@
+# 최종 버전
 import os
 import feedparser
 import openai
